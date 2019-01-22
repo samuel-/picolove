@@ -1626,7 +1626,8 @@ function _load(_cartname)
 
 	local file_found = false
 	for i=1,#ext do
-		if love.filesystem.isFile(currentDirectory..cart_no_ext..ext[i]) then
+		--if love.filesystem.isFile(currentDirectory..cart_no_ext..ext[i]) then
+		if love.filesystem.getInfo(currentDirectory..cart_no_ext..ext[i]) then
 			file_found = true
 			_cartname = cart_no_ext..ext[i]
 			break
